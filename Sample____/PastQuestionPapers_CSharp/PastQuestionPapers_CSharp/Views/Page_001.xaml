@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PastQuestionPapers_CSharp.Views.Page_001"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+
+                <Label 
+                            Grid.Row="1"
+                            Text="{Binding Question}"
+                            TextColor="White"
+                        />
+
+                <Label 
+                            Grid.Row="2"
+                            Text="{Binding Text}"
+                        TextColor="White"
+                        />
+                
+                <Button 
+                            Grid.Row="3"
+                            Text="{Binding Execute}"
+                             Command="{Binding ExecuteCommand}"
+                            BackgroundColor="Red"
+                            TextColor="White"
+                        />
+                <!--<Entry 
+                            Grid.Row="4"
+                            Text="{Binding Answer}"
+                             
+                            BackgroundColor="White"
+                            TextColor="Black"
+                        />-->
+
+                <Label 
+                            Grid.Row="5"
+                            Text="{Binding Result}"
+                            BackgroundColor="White"
+                            TextColor="Black"
+                        />
+
+
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
